@@ -67,15 +67,18 @@ class DropDown {
         
         for (let i=0; i<items.length; i++) {
             items[i].addEventListener('mouseover', this.mouseoverHandler.bind(this));
+            items[i].addEventListener('mouseout', this.mouseoutHandler.bind(this));
             
             
         }
             
         rootLink.addEventListener('click', this.clickHandler.bind(this))
-
+        
 
       
     }  
+    
+    
 
     
     clickHandler() {
@@ -93,8 +96,8 @@ class DropDown {
 //HW3: create and bind the mouseoutHandler(e)
 // restores the default styles
          mouseoutHandler(e) {
-             e.target.style.color = `${this.styles.palette.active.color} `
-             e.target.style.background = `${this.styles.palette.active.background} `
+             e.target.style.color = `${this.styles.palette.default.color} `
+             e.target.style.background = `${this.styles.palette.default.background} `
          }
 
     }
